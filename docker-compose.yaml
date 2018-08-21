@@ -1,0 +1,14 @@
+version: '3.2'
+services:
+  rspec:
+    build:
+      context: .
+      args:
+        uid: 1000
+        usr: "${USER}"
+    hostname: puppet-rspec
+    privileged: true
+    volumes:
+      - ${HOME}/work:/home/${USER}/work:rw
+      - ${HOME}/.vimrc:/home/${USER}/.vimrc:ro
+      - ${HOME}/.gitconfig:/home/${USER}/.gitconfig:ro
