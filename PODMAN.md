@@ -2,7 +2,7 @@
 
 ## Build the container
 ```Bash
-podman build --build-arg uid=${UID} --build-arg usr=${USER} -t rspec .
+buildah build --build-arg uid=${UID} --build-arg usr=${USER} -t rspec .
 ```
 
 ## Run the container
